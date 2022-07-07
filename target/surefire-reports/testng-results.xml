@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-07T08:13:56 IST" name="Suite" finished-at="2022-07-07T08:14:56 IST" duration-ms="60286">
+    <groups>
+    </groups>
+    <test started-at="2022-07-07T08:13:56 IST" name="Test" finished-at="2022-07-07T08:14:56 IST" duration-ms="60286">
+      <class name="com.ob.tests.DepositAmount">
+        <test-method is-config="true" signature="launchingApp(java.lang.String,java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:com.ob.tests.DepositAmount@16a0ee18]" started-at="2022-07-07T08:14:24 IST" name="launchingApp" finished-at="2022-07-07T08:14:26 IST" duration-ms="2035" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.ob.tests.DepositAmount.depositAmount() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@b768a65]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchingApp -->
+        <test-method signature="depositAmount()[pri:0, instance:com.ob.tests.DepositAmount@16a0ee18]" started-at="2022-07-07T08:14:26 IST" name="depositAmount" finished-at="2022-07-07T08:14:56 IST" duration-ms="29858" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- depositAmount -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.ob.tests.DepositAmount@16a0ee18]" started-at="2022-07-07T08:14:56 IST" name="closeBrowser" finished-at="2022-07-07T08:14:56 IST" duration-ms="605" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.ob.tests.DepositAmount -->
+      <class name="com.ob.tests.creatingUser">
+        <test-method is-config="true" signature="initializeReport()[pri:0, instance:com.ob.tests.creatingUser@6d4e5011]" started-at="2022-07-07T08:13:56 IST" name="initializeReport" finished-at="2022-07-07T08:13:56 IST" duration-ms="409" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeReport -->
+        <test-method is-config="true" signature="launchingApp(java.lang.String,java.lang.reflect.Method,org.testng.ITestContext)[pri:0, instance:com.ob.tests.creatingUser@6d4e5011]" started-at="2022-07-07T08:13:56 IST" name="launchingApp" finished-at="2022-07-07T08:14:02 IST" duration-ms="5620" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.ob.tests.creatingUser.createUser() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@b768a65]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchingApp -->
+        <test-method signature="createUser()[pri:0, instance:com.ob.tests.creatingUser@6d4e5011]" started-at="2022-07-07T08:14:02 IST" name="createUser" finished-at="2022-07-07T08:14:22 IST" duration-ms="20409" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUser -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.ob.tests.creatingUser@6d4e5011]" started-at="2022-07-07T08:14:22 IST" name="closeBrowser" finished-at="2022-07-07T08:14:24 IST" duration-ms="1675" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="closeReport()[pri:0, instance:com.ob.tests.creatingUser@6d4e5011]" started-at="2022-07-07T08:14:56 IST" name="closeReport" finished-at="2022-07-07T08:14:57 IST" duration-ms="549" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeReport -->
+      </class> <!-- com.ob.tests.creatingUser -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
