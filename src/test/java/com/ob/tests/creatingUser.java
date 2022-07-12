@@ -49,20 +49,20 @@ public class creatingUser extends baseTest {
 				log.info("Test Execution Started");
 				driver.get(adminURL);
 
-				AdminLoginPage al = new AdminLoginPage(driver);
+				AdminLoginPage al = new AdminLoginPage(driver,test);
 				al.login(UserName, Password);
-				AdminHomePage ah = new AdminHomePage(driver);
+				AdminHomePage ah = new AdminHomePage(driver,test);
 				ah.verifyAdminLogin();
 				
 				//Click on New User
 				ah.clickOnAccManagement();
 				
 				//New Account page
-				NewAccountPage nc = new NewAccountPage(driver);
+				NewAccountPage nc = new NewAccountPage(driver,test);
 				nc.clickOnNewAccount();		
 				nc.createNewAccount(accNo,fname, lname, middleName, emailId,password,pinNumber, begBalance);
 				
-				ManageAccountPage ma = new ManageAccountPage(driver);
+				ManageAccountPage ma = new ManageAccountPage(driver,test);
 				ma.enterAccountNo(accNo);
 				Thread.sleep(3000);
 				ma.verifyAccountNo(accNo);
@@ -70,10 +70,10 @@ public class creatingUser extends baseTest {
 				//Login with newly created user
 				driver.get(Utilities.getProperty("UserUrl"));
 				
-				UserLoginPage ulp = new UserLoginPage(driver);
+				UserLoginPage ulp = new UserLoginPage(driver,test);
 				ulp.login(emailId, password);
 				
-				UserHomePage uhp = new UserHomePage(driver);
+				UserHomePage uhp = new UserHomePage(driver,test);
 				uhp.verifyAccountNumber(accNo);
 				
 				test.log(LogStatus.PASS,"New User Creation is done successfully");

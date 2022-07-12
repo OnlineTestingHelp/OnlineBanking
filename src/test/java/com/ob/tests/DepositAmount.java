@@ -47,20 +47,20 @@ String balance="";
 				log.info("Test Execution Started");
 				driver.get(adminURL);
 
-				AdminLoginPage al = new AdminLoginPage(driver);
+				AdminLoginPage al = new AdminLoginPage(driver,test);
 				al.login(UserName, Password);
-				AdminHomePage ah = new AdminHomePage(driver);
+				AdminHomePage ah = new AdminHomePage(driver,test);
 				ah.verifyAdminLogin();
 				
 				//Click on New User
 				ah.clickOnAccManagement();
 				
 				//New Account page
-				NewAccountPage nc = new NewAccountPage(driver);
+				NewAccountPage nc = new NewAccountPage(driver,test);
 				nc.clickOnNewAccount();		
 				nc.createNewAccount(accNo,fname, lname, middleName, emailId,password,pinNumber, begBalance);
 				
-				ManageAccountPage ma = new ManageAccountPage(driver);
+				ManageAccountPage ma = new ManageAccountPage(driver,test);
 				ma.enterAccountNo(accNo);
 				Thread.sleep(3000);
 				ma.verifyAccountNo(accNo);
@@ -69,12 +69,12 @@ String balance="";
 				ah.clickOnTransaction();
 				
 				//Click on Deposit
-				DepositPage dp = new DepositPage(driver);
+				DepositPage dp = new DepositPage(driver,test);
 				dp.clickOnDepositLink();
 				dp.depositAmt(accNo, depositAmt);
 				
 				//Get latest balance
-				AdminHomePage ahp = new AdminHomePage(driver);
+				AdminHomePage ahp = new AdminHomePage(driver,test);
 				ahp.clickOnAccManagement();
 				ahp.clickOnManageAccount();
 				ma.enterAccountNo(accNo);
@@ -84,10 +84,10 @@ String balance="";
 				//Login with newly created user
 				driver.get(Utilities.getProperty("UserUrl"));
 				
-				UserLoginPage ulp = new UserLoginPage(driver);
+				UserLoginPage ulp = new UserLoginPage(driver,test);
 				ulp.login(emailId, password);
 				
-				UserHomePage uhp = new UserHomePage(driver);
+				UserHomePage uhp = new UserHomePage(driver,test);
 				uhp.verifyAccountNumber(accNo);
 				
 				//Verify Deposited amount in user login

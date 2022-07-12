@@ -11,11 +11,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.ob.BaseTest.baseTest;
+import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class AdminHomePage extends baseTest{
+public class AdminHomePage{
 	
 	WebDriver driver;
+	ExtentTest test;
 
 	@FindBy(xpath = "//a[contains(text(),'Online Banking System - Admin')]")
 	WebElement OBSAdminLink;
@@ -29,7 +31,8 @@ public class AdminHomePage extends baseTest{
 	@FindBy(xpath = "//p[text()='Manage Account']/parent::a")
 	WebElement manageAccountLink;
 	
-	public AdminHomePage(WebDriver driver) {
+	public AdminHomePage(WebDriver driver,ExtentTest test) {
+		this.test = test;
 		this.driver = driver;
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		PageFactory.initElements(driver, this);

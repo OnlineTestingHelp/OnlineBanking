@@ -6,9 +6,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ob.BaseTest.baseTest;
+import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class ManageAccountPage extends baseTest {
+public class ManageAccountPage {
+	
+	WebDriver driver;
+	ExtentTest test;
 
 	@FindBy(xpath = "//input[@type='search']")
 	WebElement search;
@@ -20,7 +24,10 @@ public class ManageAccountPage extends baseTest {
 	@FindBy(xpath = "//table[@id='indi-list']/tbody/tr[1]/td[4]")
 	WebElement currentBalance;
 	
-	public ManageAccountPage(WebDriver driver) {
+	public ManageAccountPage(WebDriver driver,ExtentTest test) {
+		this.driver = driver;
+		this.test = test;
+		
 		PageFactory.initElements(driver, this);			
 	}
 	

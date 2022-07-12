@@ -7,7 +7,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.relevantcodes.extentreports.ExtentTest;
+
 public class DepositPage {
+	WebDriver driver;
+	ExtentTest test;
 
 	@FindBy(xpath="//p[contains(text(),'Deposit')]")
 	WebElement depositLink;
@@ -21,7 +25,9 @@ public class DepositPage {
 	@FindBy(xpath = "//button[contains(text(),'Submit')]")
 	WebElement submitBtn;
 	
-	public DepositPage(WebDriver driver) {
+	public DepositPage(WebDriver driver,ExtentTest test) {
+		this.driver = driver;
+		this.test = test;
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		PageFactory.initElements(driver, this);
 	}

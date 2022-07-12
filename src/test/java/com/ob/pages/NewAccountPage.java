@@ -9,9 +9,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.ob.BaseTest.baseTest;
 import com.ob.utilities.Utilities;
+import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class NewAccountPage extends baseTest{
+public class NewAccountPage{
+	
+	
+	WebDriver driver;
+	ExtentTest test;
 		
 		@FindBy(name="account_number")
 		WebElement accountNumber;
@@ -43,7 +48,9 @@ public class NewAccountPage extends baseTest{
 		@FindBy(xpath = "//p[contains(text(),'New Account')]")
 		WebElement newAccount;
 		
-		public NewAccountPage(WebDriver driver) {
+		public NewAccountPage(WebDriver driver,ExtentTest test) {
+			this.driver = driver;
+			this.test = test;
 			PageFactory.initElements(driver, this);			
 		}
 		

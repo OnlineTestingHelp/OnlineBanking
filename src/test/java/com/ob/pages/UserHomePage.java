@@ -8,12 +8,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.ob.BaseTest.baseTest;
+import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class UserHomePage extends baseTest{
+public class UserHomePage{
 	
 	
 	WebDriver driver;
+	ExtentTest test;
 
 	@FindBy(xpath = "//h3[contains(text(),'Account Number:')]")
 	WebElement accountNumbertxt;
@@ -21,7 +23,8 @@ public class UserHomePage extends baseTest{
 	@FindBy(xpath = "//h3[contains(text(),'Current Balance')]")
 	WebElement balanceTxt;
 	
-	public UserHomePage(WebDriver driver) {
+	public UserHomePage(WebDriver driver,ExtentTest test) {
+		this.test=test;
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}

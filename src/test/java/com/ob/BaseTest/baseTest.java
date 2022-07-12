@@ -24,17 +24,15 @@ public class baseTest {
 	public WebDriver driver;
 	String browser="";
 	public static ExtentReports report;
-	public static ExtentTest test;
+	public ExtentTest test;
 
 	@BeforeMethod
 	@Parameters("Browser")
 	public void launchingApp(String browser,Method method,ITestContext context) {
 		
-		test = report.startTest(method.getName());
-		
 		this.browser = browser;
+		test = report.startTest(method.getName());
 		driver = launchApp();
-		context.setAttribute("WebDriver", driver);
 	}
 	
 	@AfterMethod

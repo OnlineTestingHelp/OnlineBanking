@@ -9,9 +9,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.ob.BaseTest.baseTest;
+import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class AdminLoginPage extends baseTest {
+public class AdminLoginPage {
+	
+	ExtentTest test;
+	WebDriver driver;
 	
 	@FindBy(name = "username")
 	WebElement UserName;
@@ -22,11 +26,13 @@ public class AdminLoginPage extends baseTest {
 	@FindBy(xpath = "//button[text()='Sign In']")
 	WebElement SignIn;
 	
-	public AdminLoginPage(WebDriver driver) {
+	public AdminLoginPage(WebDriver driver,ExtentTest test) {
+		this.test = test;
+		this.driver = driver;
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	public void login(String UN,String Pwd) {
 		try {
 			UserName.sendKeys(UN);

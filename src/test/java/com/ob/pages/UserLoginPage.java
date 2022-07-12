@@ -5,16 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
-import com.ob.BaseTest.baseTest;
+import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class UserLoginPage extends baseTest{
+public class UserLoginPage{
 	
 	WebDriver driver;
+	ExtentTest test;
 
 	@FindBy(name = "email")
 	WebElement email;
@@ -28,7 +26,8 @@ public class UserLoginPage extends baseTest{
 	@FindBy(xpath = "//h3[contains(text(),'Account Number:')]")
 	WebElement accountNumbertxt;
 	
-	public UserLoginPage(WebDriver driver) {
+	public UserLoginPage(WebDriver driver,ExtentTest test) {
+		this.test = test;
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
