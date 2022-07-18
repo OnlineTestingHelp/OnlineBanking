@@ -4,9 +4,6 @@ import java.io.IOException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.ob.BaseTest.baseTest;
@@ -18,8 +15,6 @@ import com.ob.pages.UserHomePage;
 import com.ob.pages.UserLoginPage;
 import com.ob.utilities.Utilities;
 import com.relevantcodes.extentreports.LogStatus;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class creatingUser extends baseTest {
 	Logger log;
