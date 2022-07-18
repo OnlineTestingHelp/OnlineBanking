@@ -1,7 +1,6 @@
 package com.ob.utilities;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.Random;
@@ -19,7 +18,7 @@ public class Utilities {
 	
 	public static Long getAccountNum() {
 			Random random = new Random();
-			Long num = random.nextLong(10000000000L);
+			Long num = random.nextLong(100000000);
 			return num;
 		}
 	
