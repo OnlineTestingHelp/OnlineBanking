@@ -24,7 +24,7 @@ public class Utilities {
 	
 	public static Long getRandomNum() {
 		Random random = new Random();
-		Long num = random.nextLong(100000L);
+		Long num = random.nextLong(100000);
 		return num;
 	}
 }
