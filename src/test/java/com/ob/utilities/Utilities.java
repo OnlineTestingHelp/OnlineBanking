@@ -18,13 +18,13 @@ public class Utilities {
 	
 	public static Long getAccountNum() {
 			Random random = new Random();
-			Long num = random.nextLong(100000000);
+			Long num = random.nextLong();
 			return num;
 		}
 	
 	public static Long getRandomNum() {
 		Random random = new Random();
-		Long num = random.nextLong(100000);
+		Long num = random.nextLong();
 		return num;
 	}
 }
